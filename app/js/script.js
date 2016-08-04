@@ -19,9 +19,14 @@ svg.selectAll('rect')
 	.attr('x', function(d, i){
 		return i * (w/dataset.length);
 	})
-	.attr('y', 0)
+	.attr('y', function(d){
+		return h - d; //height minus data value
+	})
 	.attr('width', w/dataset.length- barPadding)
-	.attr('height', 100);
+	.attr('height', function(d){
+		return d;
+	})
+	.attr('fill', 'teal');
 
 /*d3.select("body").selectAll("p")
     .data(dataset)
