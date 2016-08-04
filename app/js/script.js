@@ -34,4 +34,9 @@ circles.attr('cx', function(d, i){
 			.attr('cy', h/2)
 			.attr('r', function(d){
 				return d;
+			})
+			.attr('fill', 'yellow')
+			.attr('stroke', 'orange')
+			.attr('stroke-width', function(d){
+				return d/2;
 			});
