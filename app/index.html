@@ -23,8 +23,10 @@
 		    .data(dataset)
 		    .enter()
 		    .append("p")
-		    .text("New paragraph!");
+		    .text(function(d) {
+		    	return d;
+		    });
 	</script>
-	
+
 </body>
 </html>
