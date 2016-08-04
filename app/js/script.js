@@ -26,7 +26,9 @@ svg.selectAll('rect')
 	.attr('height', function(d){
 		return d;
 	})
-	.attr('fill', 'teal');
+	.attr('fill', function(d){
+		return "rgb(0,0, " + (d * 10) + ")";
+	});
 
 /*d3.select("body").selectAll("p")
     .data(dataset)
